@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tudo Sobre Google Glass</title>
+    <link rel="stylesheet" type="text/css" href="_css/estilo.css">
+    <link rel="stylesheet" type="text/css" href="_css/form.css">
+</head>
+
+<script language="javascript" src="_javascript/funcoes.js"></script>
+
+<script type="text/javascript">
+
+    function calc_total() {
+        var qtd=parseInt(document.getElementById('cQtd').value);
+        tot=qtd*1500;
+        document.getElementById('cTot').value = tot;
+    }
+</script>
+
+<body>
+
+<div id="interface">
+
+<header id="cabecalho">
+
+
+    <hgroup>
+        <h1 class="font-face">Google Glass</h1>
+        <h2 class="titillium-web-light">A revolução do Google está chegando</h2>
+    </hgroup>
+
+
+
+<img id= "icone" src="_imagens/glass-oculos-preto-peq.png" alt="Óculos Preto Pequeno" title="Óculos Preto Pequeno"/>
+
+    <nav>
+        <h1>Menu Principal</h1>
+        <ul>
+
+            <li onmouseover="mudafoto ('_imagens/home.png')" onmouseout="mudafoto ('_imagens/contato.png')" ><a href="index.html">Home</a></li>
+            <li onmouseover="mudafoto ('_imagens/especificacoes.png')" onmouseout="mudafoto ('_imagens/contato.png')"><a href="specs.html">Especificações</a></li>
+            <li onmouseover="mudafoto ('_imagens/fotos.png')" onmouseout="mudafoto ('_imagens/contato.png')"><a href="fotos.html">Fotos</a></li>
+            <li onmouseover="mudafoto ('_imagens/multimidia.png')" onmouseout="mudafoto ('_imagens/contato.png')"><a href="multimidia.html">Multimídia</a></li>
+            <li onmouseover="mudafoto ('_imagens/contato.png')" onmouseout="mudafoto ('_imagens/contato.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+    <header id="cabecalho-artigo">
+            <hgroup>
+                <h3>Fale Conosco > Contato</h3>
+                <h1 class="titillium-web-semibold">Formulário de Contato</h1>
+                <h2>por Sérgio Pinduka</h2>
+                <h3 class="direita">Atualizado em 01/Maio/2013</h3>
+            </hgroup>
+
+        </header>
+
+<form method="post" id="fContato" action="mailto:mariolima17@outlook.com" oninput="calc_total();">
+
+    <fieldset id="usuario">
+        <legend>Identificação do Usuário</legend>
+
+            <p><label for="cNome">Nome:</label> <input type="text" name="tNome" id="cNome" size="20" maxlength="30" placeholder="Nome Completo"></p>
+            <p><label for="cSenha">Senha:</label> <input type="password" name="tSenha" id="cSenha" size="8" maxlength="8" placeholder="8 Dígitos"></p>
+            <p><label for="cMail">E-mail:</label> <input type="email" name="tMail" id="cMail" size="20" maxlength="40" placeholder="Digite um E-mail Válido"></p>
+
+            <fieldset id="sexo">
+                <legend>Sexo:</legend>
+                <input type="radio" name="tSexo" id="cMasc"><label for="cMasc">Masculino</label><br>
+                <input type="radio" name="tSexo" id="cFem"><label for="cFem">Feminino</label>
+            
+            </fieldset>
+
+            <p><label for="cNasc">Data de Nascimento:</label> <input type="date" name="tNasc" id="cNasc"> </p>
+
+    </fieldset>
+
+    <fieldset id="endereco">
+        <legend>Endereço do Usuário</legend>
+
+        <p><label for="cRua">Logradouro:</label><input type="text" name="tRua" id="cRua" size="20" maxlength="80" placeholder="Rua, Avenida, Travessa..."></p>
+        <p><label for="cNum">Número:</label><input type="number" name="tNum" id="cNum" min="0" max="999999"> <p>
+        <p><label for="cEst">Estado:</label> <select name="tEst" id="cEst">
+            <optgroup label="Região Sudeste">
+                <option value="RJ">Rio de janeiro</option>
+                <option value="SP">São Paulo</option>
+                <option value="MG">Minas Gerais</option>
+            </optgroup>
+            <optgroup label="Região Sul">
+                <option value="PR">Paraná</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="RS">Rio Grande do Sul</option>
+            </optgroup>
+
+        </select></p>
+        <p><label for="cCid">Cidade:</label><input type="text" name="tCid" id="cCid" size="20" maxlength="40" placeholder="Sua Cidade" list="cidades"></p>
+            <datalist id="cidades">
+                <option value="Rio de Janeiro"></option>
+                <option value="Niteroi"></option>
+                <option value="Nova Iguaçú"></option>
+                <option value="Belford Roxo"></option>
+
+            </datalist>
+    </fieldset>
+
+    <fieldset id="mensagem">
+        <legend>Mensagem do Usuário</legend>
+
+        <p><label for="cUrg">Grau de Urgência:</label>
+            Min<input type="range" name="tUrg" id="cUrg" min="0" max="10" step="2">Max
+        </p>
+        <p><label for="cMsg">Mensagem:</label>
+            <textarea name="tMsg" id="cMsg" cols="40" rows="5" placeholder="Deixe aqui sua mensagem..."></textarea>
+
+        </p>
+    </fieldset>
+
+    <fieldset id="pedido">
+
+        <legend>Quero um Google Glass</legend>
+
+        <p><input type="checkbox" name="tPed" id="cPed" checked>
+            <label for="cPed">Gostaria de adquirir um Google Glass quando disponível</label></p>
+        <p><label for="cCor">Cor:</label><input type="color" name="tCor" id="cCor" value="#0000FF"></p>
+        <p><label for="cQtd">Quantidade:</label><input type="number" name="tQtd" id="cQtd" min="0" max="5" value="0"></p>
+        <p><label for="cTot">Preço Total: R$</label><input type="text" name="tTot" id="cTot" placeholder="Total a pagar" readonly></p>
+
+    </fieldset>
+
+    <input type="image" src="_imagens/botao-enviar.png" name="tEnviar">
+
+</form>
+
+<footer id="rodape">
+<h4>Copyright &copy; 2013 - by Sérgio Pinduka</h4>
+
+<h5>
+    <a href= "https://www.facebook.com/Jesusehmisericordioso" target="_blank">Facebook </a> 
+    <a href="https:www.twitter.com/jesusmisericordioso" target="_blank">Twitter</a>
+</h5>
+
+</footer>
+</div>
+</body>
+</html>

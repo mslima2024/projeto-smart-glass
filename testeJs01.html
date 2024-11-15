@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste JS</title>
+</head>
+<body>
+    <h1>Teste JS</h1>
+    <img id="lampada" src="_imagens/lampada-apagada.jpg" alt="Lâmpada">
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const lampada = document.getElementById('lampada');
+
+            lampada.addEventListener('mouseover', function() {
+                if (!lampada.dataset.quebrada) {
+                    lampada.src = '_imagens/lampada-acesa.jpg';
+                }
+            });
+
+            lampada.addEventListener('mouseout', function() {
+                if (!lampada.dataset.quebrada) {
+                    lampada.src = '_imagens/lampada-apagada.jpg';
+                }
+            });
+
+            lampada.addEventListener('click', function() {
+                lampada.src = '_imagens/lampada-quebrada.jpg';
+                lampada.dataset.quebrada = 'true';
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+div#tv-radio {
+
+	width: 900px;
+	height: 580px;
+	margin: auto;
+	background: url("../_imagens/radio-tv.png");
+
+}
+
+#musica {
+
+	width: 300px;
+	display: block;
+	position: relative;
+	left: 573PX;
+	top: 485PX;
+
+}
+
+#filme {
+
+	display: block;
+	position: relative;
+	left: 95px;
+	top: 70px;
+	width: 440px;
+}
+
+div#filme-um {
+
+	width:800px;
+	height: 400px;
+	margin: auto;
+}
+video#filme01 {
+
+	display: block;
+	position: relative;
+	width: 500px;
+	height: 300px;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+div#filme-dois {
+
+	width: 500px;
+	height: 250px;
+	margin: auto;
+}
+
+video#filme02 {
+
+	display: block;
+	position: relative;
+	width: 350px;
+	height: 250px;
+	padding: 10px;
+	box-sizing: border-box;
+}
